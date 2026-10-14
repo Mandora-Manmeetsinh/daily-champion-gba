@@ -1,0 +1,14 @@
+{
+  "name": "daily-champion",
+  "version": "2.0.0",
+  "description": "A free daily Pokémon battle against a League Champion from every region, in a Game Boy Advance style.",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "start": "python3 -m http.server 8000",
+    "sprites": "node scripts/fetch-sprites.js",
+    "build:standalone": "node scripts/build-standalone.js"
+  },
+  "engines": { "node": ">=18" }
+}

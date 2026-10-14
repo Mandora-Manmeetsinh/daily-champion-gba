@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daily Champion: beat a League Champion every day</title>
+<meta name="description" content="A free daily Pokémon battle against a League Champion from every region, in a Game Boy Advance style. Same random six for everyone, one official battle a day, badges, a Gauntlet mode and a shareable result grid.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%86%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Daily Champion">
+<meta property="og:description" content="A free daily Pokémon battle against a League Champion from every region.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><i></i>Daily Champion</div>
+    <div class="row"><button class="btn sm" id="soundBtn" data-act="sound">Sound: On</button><button class="btn sm" data-act="chart">Type chart</button></div>
+  </header>
+  <main id="app"><noscript>Daily Champion needs JavaScript to run battles.</noscript></main>
+  <footer>
+    Daily Champion is an unofficial fan project. It is not affiliated with or endorsed by Nintendo, Creatures Inc., GAME FREAK inc. or The Pokémon Company. Pokémon, character names and sprites belong to their owners. Sprites come from the PokeAPI sprites collection. Battles use a simplified custom engine, not Pokémon Showdown. Champion teams are fan-simplified rosters of six unique Pokémon, so they won't match every in-game team exactly.
+  </footer>
+</div>
+
+<dialog id="chart" aria-label="Type chart">
+  <h2>Type chart</h2>
+  <p class="note">Rows attack, columns defend. Green hits for double damage, red for half, black for none.</p>
+  <div class="tcw" id="chartBody"></div>
+  <button class="btn sm" data-act="close-chart">Close</button>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="engine.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
